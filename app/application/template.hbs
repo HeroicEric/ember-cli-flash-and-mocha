@@ -1,7 +1,11 @@
 {{#each flashMessages.queue as |flash|}}
-  {{flash-message flash=flash}}
+  <div id="flash-message">
+    {{flash-message flash=flash}}
+  </div>
 {{/each}}
 
 <h1>Hello!</h1>
+
+<button class="button-with-flash-message" {{action "doSomething"}}>Do the thing</button>
 
 {{outlet}}
